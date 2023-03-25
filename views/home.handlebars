@@ -11,7 +11,7 @@
 <body>
     <div id="navbar">
         <a href="/" id="linklogo">
-            <img src="/img/LogoSF.png" id="imglogo">
+            <img src="/img/LogoSF.png" id="logo-image">
         </a>
         <a href="/" class="navbutton">Home</a>
         <a href="/sobre" class="navbutton">Sobre</a>
@@ -19,21 +19,42 @@
     </div>
     <div id="content">
         <section id="presentation">
-            <div>
+            <div class="background-image" id="presentation-image"></div>
+            <div class="text-presentation">
                 <h1>Olá! Nós somos a Shift to the Future</h1>
                 <p>Uma equipe de desenvolvedores que busca o futuro</p>
             </div>
         </section>
         <section id="about">
-            <div>
+            <div class="background-image" id="about-image"></div>
+            <div class="text-about">
                 <h1>Quem somos</h1>
-                <p>Uma equipe de desenvolvedores que busca o futuro</p>
+                <p>Somos a equipe de competições do Colégio Marista São Francisco, uma equipe focada na inovação e em
+                    bons resultados nas mais diversas competições de robótica.</p>
             </div>
         </section>
         <section id="contact">
-            <div>
-                <h1>Contato</h1>
-                <p>Uma equipe de desenvolvedores que busca o futuro</p>
+            <div class="contact-info">
+                <h1>Contate-nos</h1>
+                <form action="/contact" method="post" class="contact-form">
+                    <div class="user-info">
+                        <input type="text" name="name" placeholder="Nome" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <textarea name="message" placeholder="Mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="icons">
+                    <a class="icon" href="https://wa.me/qr/IPKEMJZ3FZNTD1">
+                        <img src="https://img.icons8.com/color/48/null/whatsapp--v1.png" />
+                    </a>
+                    <a class="icon" href="https://www.facebook.com/">
+                        <img src="https://img.icons8.com/color/48/null/facebook-new.png" />
+                    </a>
+                    <a class="icon" href="https://www.instagram.com/">
+                        <img src="https://img.icons8.com/fluency/48/null/instagram-new.png" />
+                    </a>
+                </div>
             </div>
         </section>
     </div>
@@ -57,21 +78,69 @@
         color: #fff;
     }
 
-    #presentation div {
+    #presentation-image {
+        background-image: url('https://cdn.discordapp.com/attachments/746522955227594806/859167191990534154/unknown.png');
+    }
+
+    .background-image {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         height: 100%;
-        background-image: url('https://cdn.discordapp.com/attachments/746522955227594806/859167191990534154/unknown.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        filter: blur(3px);
     }
 
-    #presentation div h1 {
+    .text-presentation {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: fit-content;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+        border: #f2f2f2 1px solid;
+        height: min-content;
+        z-index: 2;
+        position: relative;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text-about {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: fit-content;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+        border: #f2f2f2 1px solid;
+        height: min-content;
+        z-index: 2;
+        position: relative;
+        top: -70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #presentation h1 {
         font-size: 3em;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #presentation p {
+        font-size: 1.5em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 15px;
     }
 
     #navbar {
@@ -98,7 +167,7 @@
         color: #fff;
     }
 
-    #imglogo {
+    #logo-image {
         float: left;
         display: block;
         height: 46px;
@@ -115,27 +184,145 @@
         padding: 0;
     }
 
-
     #about {
         background-color: #5c1158;
         color: #fff;
     }
 
-    #about div {
+    #about h1 {
+        font-size: 3em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #about p {
+        font-size: 1.5em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 15px;
+        max-width: 800px;
+        text-align: justify;
+    }
+
+    #about-image {
+        background-image: url('https://cdn.discordapp.com/attachments/746522955227594806/859172462745747456/7124a083-e6ab-425b-96e6-b90c5869d147.png');
+    }
+
+    #about a {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         height: 100%;
-        background-image: url('https://cdn.discordapp.com/attachments/746522955227594806/859172462745747456/7124a083-e6ab-425b-96e6-b90c5869d147.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     #contact {
-        background-color: #11585c;
+        background-color: #202124;
         color: #fff;
+    }
+
+    #contact h1 {
+        font-size: 3em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-bottom: 10px;
+    }
+
+    #contact p {
+        font-size: 1.5em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 15px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px 20px;
+        margin: 15px 0;
+        background-color: #515252;
+        border-radius: 20px;
+    }
+
+    .contact-form input[type=text],
+    .contact-form input[type=email],
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 2px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    .contact-form textarea {
+        height: 100px;
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .user-info input[type=text] {
+        width: 55%;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+
+    .user-info input[type=email] {
+        width: 55%;
+        margin-left: 5px;
+        margin-bottom: 10px;
+    }
+
+    .contact-form button[type=submit] {
+        background-color: #161897;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        font-size: medium;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .icon {
+        margin: 0 5px;
     }
 </style>
 
