@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe Shift to the Future</title>
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="/" id="linklogo">
+            <img src="/img/LogoSF.png" id="imglogo">
+        </a>
+        <a href="/" class="navbutton">Home</a>
+        <a href="/sobre" class="navbutton">Sobre</a>
+        <a href="/contato" class="navbutton">Contato</a>
+    </div>
+    <div id="content">
+        <section id="presentation">
+            <div>
+                <h1>Olá! Nós somos a Shift to the Future</h1>
+                <p>Uma equipe de desenvolvedores que busca o futuro</p>
+            </div>
+        </section>
+        <section id="about">
+            <div>
+                <h1>Quem somos</h1>
+                <p>Uma equipe de desenvolvedores que busca o futuro</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div>
+                <h1>Contato</h1>
+                <p>Uma equipe de desenvolvedores que busca o futuro</p>
+            </div>
+        </section>
+    </div>
+</body>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+        scroll-snap-type: y none;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+
+    #presentation {
+        background-color: #5c1411;
+        color: #fff;
+    }
+
+    #presentation div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        background-image: url('https://cdn.discordapp.com/attachments/746522955227594806/859167191990534154/unknown.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #presentation div h1 {
+        font-size: 3em;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        background-color: #161897;
+        overflow: hidden;
+        width: 100vw;
+        scroll-snap-align: start;
+    }
+
+    .navbutton {
+        border-radius: 7px;
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbutton:hover {
+        background-color: #220621;
+        color: #fff;
+    }
+
+    #imglogo {
+        float: left;
+        display: block;
+        height: 46px;
+        width: 90px;
+        padding: 5px;
+    }
+
+    #content section {
+        text-align: center;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        height: 90vh;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    #about {
+        background-color: #5c1158;
+        color: #fff;
+    }
+
+    #about div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        background-image: url('https://cdn.discordapp.com/attachments/746522955227594806/859172462745747456/7124a083-e6ab-425b-96e6-b90c5869d147.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #contact {
+        background-color: #11585c;
+        color: #fff;
+    }
+</style>
+
+</html>
